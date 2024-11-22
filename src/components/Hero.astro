@@ -4,16 +4,16 @@ import SquereButton from './SquereButton.astro';
 ---
 
 <section class="flex flex-col lg:flex-row lg:h-full">
-  <section class="w-full relative">
+  <section class="w-full h-screen relative">
   <video 
-    class="w-full h-full object-cover object-top backdrop-blur-lg"  
+    class="w-full h-screen object-cover object-top backdrop-blur-lg"  
     src="/video.mp4" 
     autoplay loop muted >
   </video>
   <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-b backdrop-blur-md from-black to-red-500 opacity-20">
     
   </div>
-  <div class="absolute inset-0 flex items-center justify-center">
+  <div class="absolute inset-0 top-0 bottom-0 flex items-center justify-center">
     <div class="max-w-[500px] px-6 py-12 text-left">
       <h1 class=" text-xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
         <span class="block text-red-700 font-chomburi">Unidad Cardiologica Latinoamericana</span>
