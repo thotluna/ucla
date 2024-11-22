@@ -1,0 +1,50 @@
+---
+import SquereButton from './SquereButton.astro';
+
+---
+
+<section class="flex flex-col lg:flex-row lg:h-full">
+  <section class="w-full relative">
+  <video 
+    class="w-full h-full object-cover object-top backdrop-blur-lg"  
+    src="/video.mp4" 
+    autoplay loop muted >
+  </video>
+  <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-b backdrop-blur-md from-black to-red-500 opacity-20">
+    
+  </div>
+  <div class="absolute inset-0 flex items-center justify-center">
+    <div class="max-w-[500px] px-6 py-12 text-left">
+      <h1 class=" text-xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+        <span class="block text-red-700 font-chomburi">Unidad Cardiologica Latinoamericana</span>
+        <span class="block font-chomburi text-white text-2xl font-bold tracking-tight sm:text-2xl md:text-4xl">Cardiologica de confianza en Caracas</span>
+      </h1>
+ 
+      <!-- <div class="mt-8 flex justify-center gap-x-6">
+        <a href="/contactanos" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Solicite su cita</a>
+        <a href="/specialistas" class="text-base font-semibold leading-7 text-gray-900 hover:text-gray-700">Consulta especialistas</a>
+      </div> -->
+    </div>
+  </div>
+</section>
+<secction class="w-full flex lg:w-[200px] lg:flex-col lg:h-screen lg:justify-stretch">
+  <SquereButton href="/contactanos" tone="light">
+    Solicite su cita
+    <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+    </svg>
+  </SquereButton>
+  <SquereButton href="/contactanos" tone="middle">
+    Solicite su cita
+    <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+    </svg>
+  </SquereButton>
+  <SquereButton href="/contactanos" tone="dark">
+    Solicite su cita
+    <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+    </svg>
+  </SquereButton>
+</secction>
+</section>

@@ -1,0 +1,24 @@
+---
+interface Props {
+  href: string;
+  tone: "light" | "middle" |"dark";
+}
+
+const t= {
+  light: "bg-red-500",
+  middle: "bg-red-600",
+  dark: "bg-red-800"
+}
+
+const { href } = Astro.props;
+const bg =  t[Astro.props.tone]
+
+console.log(bg);
+
+
+---
+
+<a class:list={[bg, "text-white font-chomburi text-sm px-4 py-2 w-full aspect-video lg:h-full lg:w-auto  "]} href={href}>
+  <slot name="icon" />
+  <slot />
+</a>
