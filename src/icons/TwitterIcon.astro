@@ -1,0 +1,14 @@
+---
+interface Props {
+  width?: string;
+  height?: string;
+  className?: string;
+}
+
+const { width, height, className } = Astro.props;
+---
+
+<svg 
+ fill="none" 
+ width={width || "48"} height={height || "48" }
+ class={className || ""} viewBox="0 0 48 48"><g clip-path="url(#a)"><mask id="b" width="48" height="48" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" d="M0 0h48v48H0V0Z"/></mask><g mask="url(#b)"><path fill="#fff" d="M37.8 2.25h7.361l-16.08 18.424L48 45.751H33.189l-11.61-15.206L8.311 45.751H.943L18.14 26.037 0 2.253h15.189l10.477 13.896L37.8 2.249Zm-2.589 39.085h4.08L12.96 6.435H8.585l26.626 34.9Z"/></g></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h48v48H0z"/></clipPath></defs></svg>
