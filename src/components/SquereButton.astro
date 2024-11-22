@@ -5,8 +5,8 @@ interface Props {
 }
 
 const t= {
-  light: "bg-red-500",
-  middle: "bg-red-600",
+  light: "bg-red-600",
+  middle: "bg-red-700",
   dark: "bg-red-800"
 }
 
@@ -18,7 +18,7 @@ console.log(bg);
 
 ---
 
-<a class:list={[bg, "text-white font-chomburi text-sm px-4 py-2 w-full aspect-video lg:h-full lg:w-auto  "]} href={href}>
+<a class:list={[bg, "text-white font-chomburi text-sm px-4 py-2 w-full flex flex-col items-center justify-center aspect-video lg:h-full lg:w-auto hover:bg-red-50 hover:text-red-600 "]} target="_blank" href={href}>
   <slot name="icon" />
   <slot />
 </a>
