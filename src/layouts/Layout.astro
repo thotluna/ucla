@@ -19,6 +19,21 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" type="image/ico" href="/favicon.ico" />
 		<title>{title}</title>
+		<link
+      rel="preload"
+      href="/fonts/Chonburi-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+		<link
+      rel="preload"
+      href="/fonts/OpenSans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+		<link rel="preload" as="video" href="/video.mp4" />
 	</head>
 	<body>
 		<Header />
