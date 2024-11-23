@@ -1,0 +1,31 @@
+---
+  interface Props {
+    name: string;
+    year: string;
+    comment: string;
+    image: string;
+  }
+
+  const { name, year, comment, image } = Astro.props;
+---
+
+<article class="w-[300px] min-w-[300px] h-[400px] border-2 border-red-500 rounded-md shadow-slate-700 shadow-md overflow-hidden p-8 flex flex-col justify-between gap-4">
+  <div class="flex items-center justify-start gap-4">
+    <img src=`/images/${image}` width="90" height="90" class="w-20 aspect-square object-cover rounded-full border-2 border-red-500" alt="Testimony" />
+
+    <div class="flex flex-col items-start justify-center gap-1">
+      <strong class="text-left font-semibold text-lg">
+        {name}
+      </strong>
+      <p class="text-left text-sm">
+        {year}
+      </p>
+      </div>  
+    </div>
+  <p class="text-left text-base text-pretty">
+    {comment}
+  </p>
+
+
+
+</article>

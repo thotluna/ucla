@@ -1,0 +1,89 @@
+---
+import TestimonyCard from './TestimonyCard.astro';
+
+
+---
+
+<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6">
+  
+  <h2>Nuestros pacientes hablan por nosotros</h2>
+  
+  <p>Cada día, recibimos innumerables testimonios de personas que han mejorado significativamente su salud cardiovascular gracias a nuestros tratamientos y atención personalizada. Sus palabras son nuestra mayor recompensa y la prueba de que estamos haciendo las cosas bien. A continuación, te presentamos algunas de sus experiencias.</p>
+
+
+  <div class="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
+    <div class="w-full relative flex items-center justify-center">
+        <button aria-label="slide backward" class="absolute z-30 left-0 ml-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer" id="prev">
+            <svg class="dark:text-red-600" width="24" height="36" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
+            <div id="slider" class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
+                <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                      <TestimonyCard 
+                      name='Juan Pérez' 
+                      year='62 años' 
+                      comment='Desde que me atiendo, me siento mucho más tranquilo. Gracias a él, he podido controlar mi presión arterial y disfrutar de más actividades con mi familia. Su paciencia y conocimientos me dan mucha confianza' 
+                      image='juan-perez.webp' />
+                </div>
+                <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                    <TestimonyCard 
+                      name='Juan Pérez' 
+                      year='62 años' 
+                      comment='Desde que me atiendo, me siento mucho más tranquilo. Gracias a él, he podido controlar mi presión arterial y disfrutar de más actividades con mi familia. Su paciencia y conocimientos me dan mucha confianza' 
+                      image='juan-perez.webp' />
+                </div>
+                <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                    <TestimonyCard 
+                      name='Juan Pérez' 
+                      year='62 años' 
+                      comment='Desde que me atiendo, me siento mucho más tranquilo. Gracias a él, he podido controlar mi presión arterial y disfrutar de más actividades con mi familia. Su paciencia y conocimientos me dan mucha confianza' 
+                      image='juan-perez.webp' />
+                </div>
+                <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                    <TestimonyCard 
+                      name='Juan Pérez' 
+                      year='62 años' 
+                      comment='Desde que me atiendo, me siento mucho más tranquilo. Gracias a él, he podido controlar mi presión arterial y disfrutar de más actividades con mi familia. Su paciencia y conocimientos me dan mucha confianza' 
+                      image='juan-perez.webp' />
+                </div>
+                <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+                    <TestimonyCard 
+                      name='Juan Pérez' 
+                      year='62 años' 
+                      comment='Desde que me atiendo, me siento mucho más tranquilo. Gracias a él, he podido controlar mi presión arterial y disfrutar de más actividades con mi familia. Su paciencia y conocimientos me dan mucha confianza' 
+                      image='juan-perez.webp' />
+                </div>
+            </div>
+        </div>
+        <button aria-label="slide forward" class="absolute z-30 right-0 mr-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" id="next">
+            <svg class="dark:text-red-600" width="24" height="36" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+  <p>¿Quieres saber más sobre nuestros tratamientos? ¡Agenda una consulta ahora!</p>
+</section>
+
+<script>
+  let defaultTransform = 0;
+function goNext() {
+    defaultTransform = defaultTransform - 398;
+    const slider = document.getElementById("slider");
+    if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
+    slider.style.transform = "translateX(" + defaultTransform + "px)";
+}
+next.addEventListener("click", goNext);
+function goPrev() {
+    const slider = document.getElementById("slider");
+    if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
+    else defaultTransform = defaultTransform + 398;
+    slider.style.transform = "translateX(" + defaultTransform + "px)";
+}
+prev.addEventListener("click", goPrev);
+
+</script>
