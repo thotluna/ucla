@@ -1,20 +1,13 @@
 ---
+import { tone } from '@const/index';
+
 interface Props {
   href: string;
-  tone: "light" | "middle" |"dark";
-}
-
-const t= {
-  light: "bg-red-600",
-  middle: "bg-red-700",
-  dark: "bg-red-800"
+  color: "light" | "middle" |"dark";
 }
 
 const { href } = Astro.props;
-const bg =  t[Astro.props.tone]
-
-console.log(bg);
-
+const bg =  tone[Astro.props.color]
 
 ---
 
