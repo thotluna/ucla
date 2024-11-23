@@ -1,0 +1,48 @@
+---
+import ServiceCard from './ServiceCard.astro';
+---
+
+<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6">
+  <h2 class="tracking-tight">Nuestros Servicios </h2>
+
+  <ServiceCard 
+    title='Electrocardiograma (ECG)'
+    titleCTA='Leer mas sobre Electrocardiogramas '
+    image='electrocardiograma'
+    position='left'
+  >
+      <p>    ¿Sientes palpitaciones o molestias en el pecho? Un ECG puede ayudar a detectar problemas cardíacos de forma temprana. Esta prueba rápida y sencilla registra la actividad eléctrica de tu corazón, permitiéndonos evaluar su salud y diagnosticar posibles afecciones.</p>
+  </ServiceCard>
+  <ServiceCard 
+    title='Ecocardiograma'
+    titleCTA='Leer mas sobre Ecocardiograma  '
+    image='ecocardiograma'
+    position='right'
+  >
+      <p>¿Quieres saber más sobre la salud de tu corazón? Un ecocardiograma es una prueba no invasiva que utiliza ondas sonoras para crear imágenes en movimiento de tu corazón. Permite evaluar la estructura y función del corazón, detectar problemas cardíacos y monitorear la eficacia de los tratamientos.</p>
+  </ServiceCard>
+  <ServiceCard 
+    title='Prueba de esfuerzo'
+    titleCTA='Leer mas sobre Prueba de Esfuerzo'
+    image='prueba-de-esfuerzo'
+    position='left'
+  >
+      <p> Quieres conocer la capacidad de tu corazón? Una prueba de esfuerzo es una evaluación segura y no invasiva que mide cómo responde tu corazón al ejercicio. Durante la prueba, caminarás sobre una cinta o pedalearás una bicicleta estacionaria mientras se monitorea tu ritmo cardíaco, presión arterial y respiración.</p>
+  </ServiceCard>
+  <ServiceCard 
+    title='Monitoreo Holter'
+    titleCTA='Leer mas sobre Holter'
+    image='Holter-de-ritmo-cardiaco'
+    position='right'
+  >
+      <p>¿Experimentas palpitaciones, mareos o desmayos? Un monitoreo Holter podría ser la respuesta. Este examen te permite registrar la actividad eléctrica de tu corazón durante 24 horas o más, mientras realizas tus actividades diarias.</p>
+  </ServiceCard>
+
+  <div class="w-full flex justify-end">
+    <a class="bg-red-500 text-white font-chomburi px-4 py-2  rounded-md" href="/contacto">
+      Conoce mas de nuestros servicios
+    </a>
+  </div>
+
+</section>  
+
