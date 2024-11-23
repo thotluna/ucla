@@ -1,0 +1,57 @@
+---
+import PropositionCard from './PropositionCard.astro';
+
+import ClockIcon from '@icons/ClockIcon.astro';
+import CheckIcon from '@icons/CheckIcon.astro';
+import GraphIcon from '@icons/Graph.astro';
+
+import WhyCard from './WhyCard.astro';
+
+---
+
+<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6">
+  <h2 class="tracking-tight">
+    Cuidamos de tu corazón como si fuera el nuestro
+  </h2>
+
+  <p class="">En nuestra unidad cardiológica, te ofrecemos una atención integral y personalizada para cuidar de tu salud cardiovascular. Contamos con un equipo de especialistas altamente calificados y tecnología de vanguardia para:</p>
+
+</section>  
+
+<section class="flex flex-col md:flex-row ">
+    <PropositionCard title="Examen no invasivo" description="Conoce nuestro equipo de especialistas expertos en el examen no invasivo." color="light">
+      <ClockIcon className="w-6 h-6 md:w-12 md:h-12" />
+    </PropositionCard>
+    <PropositionCard title="Terapia" description="Conoce nuestro equipo de especialistas expertos en el examen no invasivo." color="dark">
+      <CheckIcon className="w-6 h-6 md:w-12 md:h-12" />
+    </PropositionCard>
+    <PropositionCard title="Consultas" description="Conoce nuestro equipo de especialistas expertos en el examen no invasivo." color="middle">
+      <GraphIcon className="w-6 h-6 md:w-12 md:h-12" />
+    </PropositionCard>
+    
+  </section>
+
+  <section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6">
+    <h2 class="tracking-tight">
+      ¿Por qué debería elegirnos?
+    </h2>
+
+    <ul class="w-full flex flex-col gap-4 justify-between items-center lg:flex-row ">
+      <WhyCard 
+        title="Experiencia" 
+        description='Más de 20 años de experiencia en el cuidado del corazón.'
+        image='Experiencia-medica.webp'
+        color='light'  />
+      <WhyCard
+       title="Tecnología" 
+        description='Equipamiento médico de última generación para diagnósticos precisos.'
+        image='Pruebas-cardiacas-no-invasivas.webp'
+        color='dark'  />
+      <WhyCard 
+       title="Atención personalizada" 
+        description='Un equipo dedicado a brindar la mejor atención a cada paciente.'
+        image='Atencion-personalizada.webp'
+        color='middle' />
+    </ul>
+
+</section>  
