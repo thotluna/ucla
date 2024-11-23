@@ -15,8 +15,8 @@ const direction = position === 'left' ? 'md:flex-row' : 'md:flex-row-reverse';
   <h3>{title}</h3>
   <div class:list={[direction, "w-full flex flex-col justify-start items-center gap-4"]}>
     <picture class="w-full max-w-96 h-full flex-grow-0 flex-shrink-0">
-      <source srcset=`/images/${image}.avif` type="image/avif">
-      <img src=`/images/${image}.webp` alt="image" class="w-full h-full object-cover rounded-md" />
+      <source srcset=`/images/${image}.avif` type="image/avif" width="384" height="216">
+      <img src=`/images/${image}.webp` alt="image" class="w-full h-full object-cover rounded-md" width="384" height="216"/>
     </picture>
     <div class="flex flex-col items-start justify-center gap-4 ">
       <slot />

@@ -11,7 +11,10 @@
 
 <article class="w-[300px] min-w-[300px] h-[400px] border-2 border-red-500 rounded-md shadow-slate-700 shadow-md overflow-hidden p-8 flex flex-col justify-between gap-4">
   <div class="flex items-center justify-start gap-4">
-    <img src=`/images/${image}` width="90" height="90" class="w-20 aspect-square object-cover rounded-full border-2 border-red-500" alt="Testimony" />
+    <picture  class="w-20 aspect-square object-cover rounded-full border-2 border-red-500 overflow-hidden">
+      <source srcset=`/images/${image}.avif` type="image/avif" width="90" height="90">
+      <img src=`/images/${image}.webp` alt="image" class="w-full h-full object-cover rounded-md" width="90" height="90"/>
+    </picture>
 
     <div class="flex flex-col items-start justify-center gap-1">
       <strong class="text-left font-semibold text-lg">
