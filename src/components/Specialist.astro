@@ -1,0 +1,26 @@
+---
+import DoctorCard from './DoctorCard.astro';
+
+---
+
+<section class='container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6 '>
+  <h2>Nuestros Especialistas</h2>
+
+  <p>Nuestro equipo de cardiólogos está compuesto por profesionales altamente capacitados y experimentados, dedicados a brindar la mejor atención cardiovascular a nuestros pacientes. Cada uno de nuestros especialistas cuenta con una amplia trayectoria en su campo y se mantiene actualizado con los últimos avances en el diagnóstico y tratamiento de las enfermedades del corazón. Su enfoque personalizado y su compromiso con la excelencia nos permiten ofrecer soluciones a medida para cada paciente, garantizando los mejores resultados posibles.</p>
+
+  <div class="flex flex-col md:flex-row gap-4 items-center justify-evenly w-full h-full py-4 sm:py-8 ">
+    <DoctorCard
+      name='Dr. Josefina Feijóo'
+      specialist='Cardiología'
+      comment='Ablación por radiofrecuencia, implantación de marcapasos, estudio electrofisiológico.'
+      image='josefina-feijoo'
+    />
+    <DoctorCard
+      name='Dr. Alex Rodriguez'
+      specialist='Cardiología'
+      comment='Angioplastia coronaria, colocación de stents, tratamiento de aneurismas.'
+      image='alex-rodriguez'
+    />
+  </div>
+
+</section>
