@@ -7,12 +7,11 @@ import WhatsappIcon from '@icons/Whatsapp.astro';
 
 <section class="flex flex-col lg:flex-row lg:h-full">
   <section class="w-full h-screen relative">
-  <video 
-    class="w-full h-screen object-cover object-top backdrop-blur-lg"  
-    src="/video2.mp4" 
-    autoplay loop muted >
-  </video>
-  <!-- <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-b backdrop-blur-md from-black to-red-900 opacity-20"> -->
+  <picture>
+    <source srcset="/images/cardiologo-caracas.avif" type="image/webp">
+    <img src="/images/cardiologo-caracas.webp" alt="UCLA" class="absolute inset-0 w-full h-full object-cover">
+  </picture>
+  <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-b backdrop-blur-md from-black to-red-900 opacity-20">
     
   </div>
   <div class="absolute inset-0 top-0 bottom-0 flex items-center justify-center">
