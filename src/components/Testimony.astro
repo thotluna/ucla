@@ -1,24 +1,25 @@
 ---
+import Whatsapp from '@icons/Whatsapp.astro';
 import TestimonyCard from './TestimonyCard.astro';
 
 
 ---
 
-<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6">
+<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-4">
   
   <h2>Nuestros pacientes hablan por nosotros</h2>
   
   <p>Cada día, recibimos innumerables testimonios de personas que han mejorado significativamente su salud cardiovascular gracias a nuestros tratamientos y atención personalizada. Sus palabras son nuestra mayor recompensa y la prueba de que estamos haciendo las cosas bien. A continuación, te presentamos algunas de sus experiencias.</p>
 
 
-  <div class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6flex items-center justify-center w-full h-full sm:py-8 ">
+  <div class="container max-w-6xl mx-auto  flex flex-col gap-6 items-start justify-center w-full ">
     <div class="w-full relative flex items-center justify-center">
         <button aria-label="slide backward" class="absolute z-30 left-0 ml-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer" id="prev">
             <svg class="dark:text-gray-900 hover:text-red-600 hover:scale-150" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </button>
-        <div class="w-full h-[450px] mx-auto overflow-x-hidden overflow-y-hidden">
+        <div class="w-full h-[406px] mx-auto overflow-x-hidden overflow-y-hidden">
             <div id="slider" class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                 <div class="flex flex-shrink-0 relative w-full sm:w-auto">
                       <TestimonyCard 
@@ -58,13 +59,14 @@ import TestimonyCard from './TestimonyCard.astro';
     </div>
 </div>
 
-
-
   <p>¿Quieres saber más sobre nuestros tratamientos? ¡Agenda una consulta ahora!</p>
 
   <div class="flex items-center justify-end w-full h-full   ">
-    <a href="/contacto" class="border-red-700 border-2 text-red-700 font-chomburi px-4 py-2  rounded-md">
-    Solicite su cita ahora
+    <a href="/contacto" class="bg-red-700 border-2 text-white font-chomburi px-4 py-2  rounded-md">
+    <div class="flex items-center justify-center gap-2">
+      <Whatsapp className='w-6 h-6 ' />
+      Solicite su cita ahora
+    </div>
     </a>
   </div>
 </section>
