@@ -9,16 +9,15 @@ import WhyCard from './WhyCard.astro';
 
 ---
 
-<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6">
-  <h2 class="tracking-tight">
-    Cuidamos de tu corazón como si fuera el nuestro
-  </h2>
+<section class="flex flex-col gap-4 pt-16 pb-8 ">
+  <article class="container max-w-6xl mx-auto px-4 flex flex-col gap-6">
+    <h2 class="tracking-tight">
+      Cuidamos de tu corazón como si fuera el nuestro
+    </h2>
+    <p class="">En nuestra unidad cardiológica, te ofrecemos una atención integral y personalizada para cuidar de tu salud cardiovascular. Contamos con un equipo de especialistas altamente calificados y tecnología de vanguardia para:</p>
+  </article>  
 
-  <p class="">En nuestra unidad cardiológica, te ofrecemos una atención integral y personalizada para cuidar de tu salud cardiovascular. Contamos con un equipo de especialistas altamente calificados y tecnología de vanguardia para:</p>
-
-</section>  
-
-<section class="flex flex-col md:flex-row ">
+  <section class="flex flex-col md:flex-row my-2 ">
     <PropositionCard title="Examen no invasivo" description="Conoce nuestro equipo de especialistas expertos en el examen no invasivo." color="light">
       <ClockIcon className="w-6 h-6 md:w-12 md:h-12" />
     </PropositionCard>
@@ -28,10 +27,9 @@ import WhyCard from './WhyCard.astro';
     <PropositionCard title="Consultas" description="Conoce nuestro equipo de especialistas expertos en el examen no invasivo." color="middle">
       <GraphIcon className="w-6 h-6 md:w-12 md:h-12" />
     </PropositionCard>
-    
   </section>
 
-  <section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6">
+  <section class="container max-w-6xl mx-auto px-6  flex flex-col gap-6">
     <h2 class="tracking-tight">
       ¿Por qué debería elegirnos?
     </h2>
@@ -53,5 +51,5 @@ import WhyCard from './WhyCard.astro';
         image='Atencion-personalizada.webp'
         color='middle' />
     </ul>
-
-</section>  
+  </section>  
+</section>
