@@ -6,16 +6,17 @@
     comment: string;
     image: string;
     href: string;
+    alt: string;
   }
 
-  const { name, specialist, comment, image, href } = Astro.props;
+  const { name, specialist, comment, image, href, alt } = Astro.props;
 ---
 
 <a href={href}>
   <article class="relative w-[300px]  h-[450px] border-2 border-red-500 rounded-md shadow-slate-700 shadow-md overflow-hidden hover:scale-105 transition duration-300 cursor-pointer">
     <picture class="w-full h-full">
         <source srcset=`/images/${image}.avif` type="image/avif">
-        <img loading="lazy" src=`/images/${image}.webp` alt="image" class="w-full h-full object-cover rounded-md" />
+        <img loading="lazy" src=`/images/${image}.webp` alt={alt} class="w-full h-full object-cover rounded-md" />
       </picture>
 
     <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-b backdrop-blur-md from-red-900 to-red-900 opacity-90" style={"clip-path: ellipse(96% 47% at 16% 97%);"}>
