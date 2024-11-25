@@ -1,8 +1,9 @@
 ---
+import RightArrow from '@icons/RightArrow.astro';
 import ServiceCard from './ServiceCard.astro';
 ---
 
-<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex flex-col gap-6">
+<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8  flex flex-col gap-6">
   <h2 class="tracking-tight">Nuestros Servicios </h2>
 
   <ServiceCard 
@@ -39,8 +40,11 @@ import ServiceCard from './ServiceCard.astro';
   </ServiceCard>
 
   <div class="w-full flex justify-end">
-    <a class="bg-red-700 text-white font-chomburi px-4 py-2  rounded-md" href="/contacto">
-      Conoce mas de nuestros servicios
+    <a class="bg-red-700 text-white text-pretty font-chomburi px-4 py-2  rounded-md" href="/contacto">
+      <div class="flex items-center justify-center">
+        Conoce mas 
+        <RightArrow className='w-6 h-6' />
+      </div>
     </a>
   </div>
 
