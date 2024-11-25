@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  image: string;
+  href: string;
+}
+
+const { title, image, href } = Astro.props;
+---
+
+<a href={href}>
+  <article class="w-[300px] h-[360px] bg-red-700 text-white cursor-pointer flex flex-col justify-center gap-4 rounded-sm shadow-md shadow-slate-800">
+    <picture class="h-[188px]">
+        <source srcset=`/images/${image}.avif` type="image/avif">
+        <img src=`/images/${image}.webp` alt="image" class="w-full h-full object-cover rounded-md" />
+      </picture>
+      <h3 class="text-white text-left flex-1 p-4">{title}</h3>
+  </article> 
+
+</a>
