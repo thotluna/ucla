@@ -1,0 +1,10 @@
+---
+interface Props {
+  className?: string;
+  width?: string;
+  height?: string;
+}
+
+const { className, width, height } = Astro.props;
+---
+<svg class:list={[className]} width={width} height={height}  viewBox="0 0 24 24"   fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-chevrons-right"><path stroke="none" d="M0 0h24v24H0z"/><path d="m7 7 5 5-5 5M13 7l5 5-5 5"/></svg>
