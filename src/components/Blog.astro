@@ -1,6 +1,7 @@
 ---
 import RightArrow from '@icons/RightArrow.astro';
 import ArticleBlog from './ArticleBlog.astro';
+import ButtonLink from './ButtonLink.astro';
 ---
 
 <section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 flex flex-col gap-6">
@@ -13,11 +14,11 @@ import ArticleBlog from './ArticleBlog.astro';
     <li><ArticleBlog href='#' title='Mitos y verdades sobre las enfermedades del corazón' image='enfermedades-del-corazon' /></li>
   </ul>
 
-  <div class="flex items-center justify-end w-full h-full   ">
-    <a href="/contacto" class="bg-red-700 border-2 text-white font-chomburi px-4 py-2  rounded-md flex items-center justify-center gap-2">
-      Solicite su cita ahora
+  <div class="w-full flex justify-end">
+    <ButtonLink href='#'>
+      Conozca más artículos
       <RightArrow className='w-6 h-6' />
-    </a>
+    </ButtonLink>
   </div>
 
 </section>

@@ -1,6 +1,7 @@
 ---
 import Whatsapp from '@icons/Whatsapp.astro';
 import TestimonyCard from './TestimonyCard.astro';
+import ButtonLink from '@components/ButtonLink.astro';
 
 
 ---
@@ -62,17 +63,14 @@ import TestimonyCard from './TestimonyCard.astro';
   <p>¿Quieres saber más sobre nuestros tratamientos? ¡Agenda una consulta ahora!</p>
 
   <div class="flex items-center justify-end w-full h-full   ">
-    <a href="/contacto" class="bg-red-700 border-2 text-white font-chomburi px-4 py-2  rounded-md">
-    <div class="flex items-center justify-center gap-2">
-      <Whatsapp className='w-6 h-6 ' />
-      Solicite su cita ahora
-    </div>
-    </a>
+    <ButtonLink href="https://wa.me/584243212325">
+      <div class="flex items-center justify-center gap-2">
+        <Whatsapp className='w-6 h-6 ' />
+        Contáctenos ahora
+      </div>
+    </ButtonLink>
   </div>
 </section>
-
-
-
 
 <script>
   let defaultTransform = 0;

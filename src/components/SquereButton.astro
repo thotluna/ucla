@@ -4,14 +4,18 @@ import { tone } from '@const/index';
 interface Props {
   href: string;
   color: "light" | "middle" |"dark";
+  className?: string;
 }
 
-const { href } = Astro.props;
+const { href, className } = Astro.props;
 const bg =  tone[Astro.props.color]
 
 ---
 
-<a class:list={[bg, "text-white font-chomburi text-sm px-4 py-2 w-full flex flex-col items-center justify-center aspect-video lg:h-full lg:w-auto hover:bg-red-50 hover:text-red-600 transition duration-300"]} target="_blank" href={href}>
+<a class:list={[
+    bg, 
+    "text-white font-chomburi text-sm px-4 py-2 w-full flex flex-col items-center justify-center aspect-video lg:h-full lg:w-auto hover:bg-red-50 hover:text-red-600 transition duration-300", 
+    "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-50 focus:scale-95 ", className]} target="_blank" href={href}>
   <slot name="icon" />
   <slot />
 </a>
