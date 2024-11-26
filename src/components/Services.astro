@@ -4,7 +4,7 @@ import ServiceCard from './ServiceCard.astro';
 import ButtonLink from './ButtonLink.astro';
 ---
 
-<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8  flex flex-col gap-6">
+<section id="services" class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8  flex flex-col gap-6">
   <h2 class="tracking-tight">Nuestros Servicios </h2>
 
   <ServiceCard 
@@ -43,13 +43,6 @@ import ButtonLink from './ButtonLink.astro';
   >
       <p>¿Experimentas palpitaciones, mareos o desmayos? Un monitoreo Holter podría ser la respuesta. Este examen te permite registrar la actividad eléctrica de tu corazón durante 24 horas o más, mientras realizas tus actividades diarias.</p>
   </ServiceCard>
-
-  <div class="w-full flex justify-end">
-    <ButtonLink href='#'>
-      Conozca más servicios
-      <RightArrow className='w-6 h-6' />
-    </ButtonLink>
-  </div>
 
 </section>  
 
