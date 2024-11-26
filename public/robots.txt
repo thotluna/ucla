@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ucla-xi.vercel.app/
+
+# Sitemaps
+Sitemap: https://ucla-xi.vercel.app//sitemap-index.xml
