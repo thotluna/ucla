@@ -1,14 +1,13 @@
 ---
-  interface Props {
-    href: string;
-  }
-  const { href } = Astro.props;
+interface Props {
+  href: string
+}
+const { href } = Astro.props
 ---
 
-
-
-
-<li class="font-chomburi text-sm px-4 py-2  rounded-md border-b-2 border-transparent hover:border-red-700 hover:bg-red-100 hover:backdrop-blur-md">
+<li
+  class="font-chomburi text-sm px-4 py-2 rounded-md border-b-2 border-transparent hover:border-red-700 hover:bg-red-100 hover:backdrop-blur-lg"
+>
   <a href={href} class="group block w-full text-center">
     <slot />
   </a>
