@@ -1,24 +1,57 @@
 ---
-import RightArrow from '@icons/RightArrow.astro';
-import ArticleBlog from './ArticleBlog.astro';
-import ButtonLink from './ButtonLink.astro';
+import RightArrow from '@icons/RightArrow.astro'
+import ArticleBlog from './ArticleBlog.astro'
+import ButtonLink from './ButtonLink.astro'
 ---
 
-<section class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 flex flex-col gap-6">
-  <h2 class="tracking-tight">Descubre nuestros consejos para un corazón saludable </h2>
-  <p>Descubre los últimos avances en el cuidado del corazón y recibe consejos prácticos para mejorar tu salud cardiovascular. Nuestros expertos te guiarán en el camino hacia un corazón más sano.</p>
+<section
+  class="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 flex flex-col gap-6"
+>
+  <h2 class="tracking-tight">
+    Descubre nuestros consejos para un corazón saludable
+  </h2>
+  <p>
+    Descubre los últimos avances en el cuidado del corazón y recibe consejos
+    prácticos para mejorar tu salud cardiovascular. Nuestros expertos te guiarán
+    en el camino hacia un corazón más sano.
+  </p>
 
-  <ul class="w-full flex flex-col gap-4 justify-center items-center  md:flex-row md:flex-wrap md:justify-evenly">
-    <li><ArticleBlog href='#' title='¿Cómo mejorar mi salud cardiovascular?' image='controlar-presion-arterial' alt='Controlar presión arterial' /></li>
-    <li><ArticleBlog href='#' title='Descubre cómo cuidar de tu salud cardiovascular' image='consejos-salud-corazon' alt='Consejos para cuidar de tu salud cardiovascular' /></li>
-    <li><ArticleBlog href='#' title='Mitos y verdades sobre las enfermedades del corazón' image='enfermedades-del-corazon' alt='Mitos y verdades sobre las enfermedades del corazón' /></li>
+  <ul
+    class="w-full flex flex-col gap-4 justify-center items-center md:flex-row md:flex-wrap md:justify-evenly"
+  >
+    <li>
+      <ArticleBlog
+        href="#"
+        title="¿Cómo mejorar mi salud cardiovascular?"
+        image="controlar-presion-arterial"
+        alt="Controlar presión arterial"
+        style="animation-range: entry 20% cover 40%;"
+      />
+    </li>
+    <li>
+      <ArticleBlog
+        href="#"
+        title="Descubre cómo cuidar de tu salud cardiovascular"
+        image="consejos-salud-corazon"
+        alt="Consejos para cuidar de tu salud cardiovascular"
+        style="animation-range: entry 25% cover 45%;"
+      />
+    </li>
+    <li>
+      <ArticleBlog
+        href="#"
+        title="Mitos y verdades sobre las enfermedades del corazón"
+        image="enfermedades-del-corazon"
+        alt="Mitos y verdades sobre las enfermedades del corazón"
+        style="animation-range: entry 30% cover 45%;"
+      />
+    </li>
   </ul>
 
   <div class="w-full flex justify-end">
-    <ButtonLink href='#'>
+    <ButtonLink href="#">
       Conozca más artículos
-      <RightArrow className='w-6 h-6' />
+      <RightArrow className="w-6 h-6" />
     </ButtonLink>
   </div>
-
 </section>

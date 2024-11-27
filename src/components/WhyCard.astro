@@ -1,31 +1,39 @@
 ---
 interface Props {
-  title: string;
-  description: string;
-  image: string;
-  alt: string;  
+  title: string
+  description: string
+  image: string
+  alt: string
+  style?: string
 }
 
-const { title, description, image, alt } = Astro.props;
- 
-const src = `/images/${image}`;
+const { title, description, image, alt, style } = Astro.props
 
+const src = `/images/${image}`
 ---
 
 <li>
-  <article class="relative w-[300px] aspect-square border-2 border-red-500 rounded-md shadow-slate-700 shadow-md overflow-hidden">
-    <img  loading="lazy" class="w-full h-full" src={src} alt={alt} />
+  <article
+    class="animate-picture relative w-[300px] aspect-square border-2 border-red-500 rounded-md shadow-slate-700 shadow-md overflow-hidden"
+    style={style}
+  >
+    <img loading="lazy" class="w-full h-full" src={src} alt={alt} />
 
-    <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-b backdrop-blur-md from-red-900 to-red-900 opacity-50" style={"clip-path: ellipse(96% 56% at 16% 97%);"}>
+    <div
+      class="absolute inset-0 flex items-center justify-center bg-gradient-to-b backdrop-blur-md from-red-900 to-red-900 opacity-50"
+      style={'clip-path: ellipse(96% 56% at 16% 97%);'}
+    >
     </div>
 
-    <div class="z-20 absolute bottom-0 left-0 right-0 flex flex-col items-start justify-start gap-4 p-4 text-white">
+    <div
+      class="z-20 absolute bottom-0 left-0 right-0 flex flex-col items-start justify-start gap-4 p-4 text-white"
+    >
       <h3 class="text-white text-left text-3xl">
-      {title}
-    </h3>
-    <p class="text-white text-left text-base">
-      {description}
-    </p>
+        {title}
+      </h3>
+      <p class="text-white text-left text-base">
+        {description}
+      </p>
     </div>
   </article>
 </li>

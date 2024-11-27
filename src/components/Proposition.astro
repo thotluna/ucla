@@ -1,55 +1,77 @@
 ---
-import PropositionCard from './PropositionCard.astro';
+import PropositionCard from './PropositionCard.astro'
 
-import ClockIcon from '@icons/ClockIcon.astro';
-import CheckIcon from '@icons/CheckIcon.astro';
-import GraphIcon from '@icons/Graph.astro';
+import ClockIcon from '@icons/ClockIcon.astro'
+import CheckIcon from '@icons/CheckIcon.astro'
+import GraphIcon from '@icons/Graph.astro'
 
-import WhyCard from './WhyCard.astro';
-
+import WhyCard from './WhyCard.astro'
 ---
 
-<section class="flex flex-col gap-4 pt-16 pb-8 ">
+<section class="flex flex-col gap-4 pt-16 pb-8">
   <article class="container max-w-6xl mx-auto px-4 flex flex-col gap-6">
     <h2 class="tracking-tight">
       Cuidamos de tu corazón como si fuera el nuestro
     </h2>
-    <p class="">En nuestra unidad cardiológica, te ofrecemos una atención integral y personalizada para cuidar de tu salud cardiovascular. Contamos con un equipo de especialistas altamente calificados y tecnología de vanguardia para:</p>
-  </article>  
+    <p class="">
+      En nuestra unidad cardiológica, te ofrecemos una atención integral y
+      personalizada para cuidar de tu salud cardiovascular. Contamos con un
+      equipo de especialistas altamente calificados y tecnología de vanguardia
+      para:
+    </p>
+  </article>
 
-  <section class="flex flex-col md:flex-row my-2 ">
-    <PropositionCard title="Diagnosticar tempranamente" description="Realizamos estudios como ecocardiogramas, holter y pruebas de esfuerzo para detectar cualquier anomalía en tu corazón." color="light">
+  <section class="flex flex-col md:flex-row my-2">
+    <PropositionCard
+      title="Diagnosticar tempranamente"
+      description="Realizamos estudios como ecocardiogramas, holter y pruebas de esfuerzo para detectar cualquier anomalía en tu corazón."
+      color="light"
+    >
       <ClockIcon className="w-6 h-6 md:w-12 md:h-12" />
     </PropositionCard>
-    <PropositionCard title="Tratar de manera efectiva" description="Diseñamos planes de tratamiento personalizados para cada paciente, adaptándonos a sus necesidades y condiciones específicas." color="dark">
+    <PropositionCard
+      title="Tratar de manera efectiva"
+      description="Diseñamos planes de tratamiento personalizados para cada paciente, adaptándonos a sus necesidades y condiciones específicas."
+      color="dark"
+    >
       <CheckIcon className="w-6 h-6 md:w-12 md:h-12" />
     </PropositionCard>
-    <PropositionCard title="Monitorear tu progreso" description="Brindamos un seguimiento continuo a pacientes con enfermedades cardíacas crónicas, asegurando el control de tu condición y mejorando tu calidad de vida." color="middle">
+    <PropositionCard
+      title="Monitorear tu progreso"
+      description="Brindamos un seguimiento continuo a pacientes con enfermedades cardíacas crónicas, asegurando el control de tu condición y mejorando tu calidad de vida."
+      color="middle"
+    >
       <GraphIcon className="w-6 h-6 md:w-12 md:h-12" />
     </PropositionCard>
   </section>
 
-  <section class="container max-w-6xl mx-auto px-6  flex flex-col gap-6">
-    <h2 class="tracking-tight">
-      ¿Por qué debería elegirnos?
-    </h2>
+  <section class="container max-w-6xl mx-auto px-6 flex flex-col gap-6">
+    <h2 class="tracking-tight">¿Por qué debería elegirnos?</h2>
 
-    <ul class="w-full flex flex-col gap-4 justify-between items-center lg:flex-row ">
-      <WhyCard 
-        title="Experiencia" 
-        description='Más de 20 años dedicados al cuidado integral del corazón.'
-        image='Experiencia-medica.webp'
-        alt='Tu cardiólogo en Caracas' />
+    <ul
+      class="w-full flex flex-col gap-4 justify-between items-center lg:flex-row"
+    >
       <WhyCard
-       title="Tecnología" 
-        description='Equipamiento médico de última generación para diagnósticos precisos y tratamientos efectivos.'
-        image='Pruebas-cardiacas-no-invasivas.webp'
-        alt='Pruebas cardiacas en caracas' />
-      <WhyCard 
-       title="Atención personalizada" 
-        description='Un equipo de especialistas altamente capacitados que te brindarán la atención que necesitas.'
-        image='Atencion-personalizada.webp'
-        alt='Cardiologo en la zona' />
+        title="Experiencia"
+        description="Más de 20 años dedicados al cuidado integral del corazón."
+        image="Experiencia-medica.webp"
+        alt="Tu cardiólogo en Caracas"
+        style={'animation-range: entry 20% cover 30%;'}
+      />
+      <WhyCard
+        title="Tecnología"
+        description="Equipamiento médico de última generación para diagnósticos precisos y tratamientos efectivos."
+        image="Pruebas-cardiacas-no-invasivas.webp"
+        alt="Pruebas cardiacas en caracas"
+        style={'animation-range: entry 25% cover 35%;'}
+      />
+      <WhyCard
+        title="Atención personalizada"
+        description="Un equipo de especialistas altamente capacitados que te brindarán la atención que necesitas."
+        image="Atencion-personalizada.webp"
+        alt="Cardiologo en la zona"
+        style={'animation-range: entry 40% cover 40%;'}
+      />
     </ul>
-  </section>  
+  </section>
 </section>
