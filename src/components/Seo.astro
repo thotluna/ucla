@@ -1,53 +1,63 @@
 ---
-import type { Preload } from "../types/Preload"
+import type { Preload } from '../types/Preload'
 
 interface Props {
-	title: string
-	description: string
-	preload?: Array<Preload>
-	canonical?: string
-	image?: string
+  title: string
+  description: string
+  preload?: Array<Preload>
+  canonical?: string
+  image?: string
 }
 
 const determineCanonicalURL = () => {
-	if (Astro.url.host.includes("localhost")) return "http://localhost:4321"
-	return canonical || Astro.url.pathname
+  if (Astro.url.host.includes('localhost')) return 'http://localhost:4321'
+  return canonical || Astro.url.pathname
 }
 
 const canonicalURL = new URL(determineCanonicalURL(), Astro.site)
 
-const { title, description, preload, canonical, image = "https://ucla-xi.vercel.app/images/og.jpg" } = Astro.props
+const {
+  title,
+  description,
+  preload,
+  canonical,
+  image = 'https://ucla-xi.vercel.app/images/og-image.jpg',
+} = Astro.props
 ---
+
 <title>{title}</title>
 
 <meta charset="UTF-8" />
 <meta name="description" content={description} />
 <link
-      rel="preload"
-      href="/fonts/Chonburi-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-		<link
-      rel="preload"
-      href="/fonts/OpenSans.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+  rel="preload"
+  href="/fonts/Chonburi-Regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/OpenSans.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
 
 {
-	preload?.map(({ href, as, type, rel = "preload", crossorigin }) => (
-		<link {rel} {href} {as} {type} {crossorigin} />
-	))
+  preload?.map(({ href, as, type, rel = 'preload', crossorigin }) => (
+    <link {rel} {href} {as} {type} {crossorigin} />
+  ))
 }
 
 <link rel="canonical" href={canonicalURL} />
 <meta name="viewport" content="width=device-width" />
 <meta name="theme-color" content="#d5ff00" />
 
-<meta name="keywords" content="Cardiología, cardiología latinoamericana, cardiología en caracas, cardiología de confianza, cardiología de confianza en caracas, cardiólogo en caracas, cardiólogo económico, enfermedad cardiaca, enfermedad cardíaca, ecocardiograma, electrocardiograma, holter, prueba de esfuerzo, monitoreo holter, terapia cardiovascular" />
+<meta
+  name="keywords"
+  content="Cardiología, cardiología latinoamericana, cardiología en caracas, cardiología de confianza, cardiología de confianza en caracas, cardiólogo en caracas, cardiólogo económico, enfermedad cardiaca, enfermedad cardíaca, ecocardiograma, electrocardiograma, holter, prueba de esfuerzo, monitoreo holter, terapia cardiovascular"
+/>
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@Eladiofeijoo" />
