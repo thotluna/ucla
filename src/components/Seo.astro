@@ -9,12 +9,12 @@ interface Props {
   image?: string
 }
 
-const determineCanonicalURL = () => {
-  if (Astro.url.host.includes('localhost')) return 'http://localhost:4321'
-  return canonical || Astro.url.pathname
-}
+// const determineCanonicalURL = () => {
+//   if (Astro.url.host.includes('localhost')) return 'http://localhost:4321'
+//   return canonical || Astro.url.pathname
+// }
 
-const canonicalURL = new URL(determineCanonicalURL(), Astro.site)
+// const canonicalURL = new URL(determineCanonicalURL(), Astro.site)
 
 const {
   title,
@@ -50,7 +50,7 @@ const {
   ))
 }
 
-<link rel="canonical" href={canonicalURL} />
+<!-- <link rel="canonical" href={canonicalURL} /> -->
 <meta name="viewport" content="width=device-width" />
 <meta name="theme-color" content="#d5ff00" />
 

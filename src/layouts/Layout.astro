@@ -4,6 +4,8 @@ import Footer from '@components/Footer.astro'
 import Seo from '@components/Seo.astro'
 import type { Preload } from '../types/Preload'
 
+export const prerender = false;
+
 interface Props {
   title: string
   description: string
