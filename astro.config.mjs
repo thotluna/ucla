@@ -6,10 +6,12 @@ import sitemap from '@astrojs/sitemap';
 
 
 
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ucla-xi.vercel.app/',
   integrations: [tailwind(), sitemap()],
   // output: 'server',
   // adapter: vercel({}),
+
 });
