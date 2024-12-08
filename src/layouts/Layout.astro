@@ -3,6 +3,7 @@ import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 import Seo from '@components/Seo.astro'
 import type { Preload } from '../types/Preload'
+import Analytics from '@vercel/analytics/astro'
 
 export const prerender = false;
 
@@ -10,18 +11,17 @@ interface Props {
   title: string
   description: string
   preload?: Array<Preload>
-  canonical?: string
+  // canonical?: string
   image?: string
 }
 
-const { title, description, preload, canonical, image } = Astro.props
+const { title, description, preload,  image } = Astro.props
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <Seo
-      canonical={canonical}
       description={description}
       image={image}
       preload={preload}
@@ -33,6 +33,7 @@ const { title, description, preload, canonical, image } = Astro.props
     <Header />
     <slot />
     <Footer />
+    <Analytics />
   </body>
 </html>
 <style is:global>
