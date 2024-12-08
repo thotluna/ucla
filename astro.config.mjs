@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-// import vercel from '@astrojs/vercel';
+import vercel from '@astrojs/vercel';
 
 
 
@@ -11,7 +11,19 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://ucla-xi.vercel.app/',
   integrations: [tailwind(), sitemap()],
-  // output: 'server',
-  // adapter: vercel({}),
+  adapter: vercel({
+		webAnalytics: {
+			enabled: true,
+		},
+	}),
+	output: "server",
+  vite:{
+    build: {
+			cssMinify: "lightningcss",
+		},
+    ssr:{
+      external:["path-to-regexp"]
+    }
+  }
 
 });
