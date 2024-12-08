@@ -8,7 +8,7 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://ucla-xi.vercel.app/',
   integrations: [tailwind(), sitemap()],
-  // output: "server",
+  output: "server",
   adapter: vercel({
 		webAnalytics: {
 			enabled: true,
